@@ -15,6 +15,6 @@ import { IHandlerAccumulator } from './IHandlerAccumulator';
  */
 export interface IHandlerInput {
   accumulator: IHandlerAccumulator;
-  options: ITransformOptions;
-  source: ITransformSource;
+  options?: ITransformOptions;
+  source?: ITransformSource;
 }
