@@ -1,6 +1,6 @@
 {
   "name": "@datr.tech/marble-transformer-core",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": false,
   "description": "Marble transformer core",
   "keywords": [
