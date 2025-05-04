@@ -1,3 +1,6 @@
+/**
+ * @module core/transformers
+ */
 import { ITransformer } from '@app-mtc/interfaces/core/transformers';
 import { ITransformOutput } from '@app-mtc/interfaces/core/transforms';
 
@@ -10,16 +13,16 @@ import { ITransformOutput } from '@app-mtc/interfaces/core/transforms';
  *
  * @param							{ITransformerInput}		params
  * @param							{IHandler[]}					params.handlers		REQUIRED		An array of 'handler' functions.
- *
  * @returns						{ITransformerOutput}	An object containing a 'transform' function.
+ *
+ * @see								{@link module:interfaces/core/transformers/ITransformer}
+ * @see								{@link module:test/unit/core/transformers}
  *
  * @author						Datr.Tech Admin <admin@datr.tech>
  * @version						0.3.1
  *
  * @example           const transform = transformer({ handlers });
  *                    const destination = transform({ source });
- *
- * @example           const destination = transformer({ handlers })({ source });
  */
 export const transformer: ITransformer = ({ handlers }) => {
   /**
@@ -32,8 +35,9 @@ export const transformer: ITransformer = ({ handlers }) => {
    * @param           {ITransformInput}     params
    * @param           {ISource}             params.source			REQUIRED		The object to be transformer.
    * @param           {IOptions}            params.options		OPTIONAL		An optional 'options' object.
-   *
    * @returns					{ITransformOutput}		The transformed 'source'.
+   *
+   * @see							{@link module:interfaces/core/transforms/ITransform}
    *
    * @author					Datr.Tech Admin <admin@datr.tech>
    * @version					0.3.1
